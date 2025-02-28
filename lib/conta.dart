@@ -28,3 +28,11 @@ class Conta {
     print('A conta é do(a) ${this._titular}');
   }
 }
+
+class ContaPoupanca extends Conta{
+  ContaPoupanca(super._saldo, super._titular);
+}
+
+class ContaCorrente extends Conta{
+  ContaCorrente(super._titular, super._saldo);
+}

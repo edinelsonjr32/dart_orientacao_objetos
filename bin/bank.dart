@@ -1,4 +1,3 @@
-
 import 'package:bank/conta.dart';
 
 void main() {
@@ -21,6 +20,14 @@ void main() {
   contaRoberta.enviar(contaMatheus, 400);
   contaRoberta.imprimirSaldo();
   contaMatheus.imprimirSaldo();
-  
-}
 
+  ContaCorrente contaChris = ContaCorrente("Chris", 4000);
+  ContaPoupanca contaDenize = ContaPoupanca("Denize", 4000);
+
+  contaChris.imprimirSaldo();
+  contaChris.receberSaldo(100);
+
+  contaDenize.imprimirSaldo();
+  contaDenize.enviar(contaRoberta, 2000);
+  contaDenize.imprimirSaldo();
+}
