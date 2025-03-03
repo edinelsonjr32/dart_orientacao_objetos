@@ -1,8 +1,8 @@
 import 'package:bank/conta.dart';
 
 void main() {
-  Conta contaMatheus = Conta('Edinelson', 1000);
-  Conta contaRoberta = Conta('Roberta', 2000);
+  ContaCorrente contaMatheus = ContaCorrente('Edinelson', 1000);
+  ContaPoupanca contaRoberta = ContaPoupanca('Roberta', 2000);
   contaRoberta.imprimirSaldo();
   contaRoberta.receberSaldo(333.09);
   contaRoberta.imprimirSaldo();
