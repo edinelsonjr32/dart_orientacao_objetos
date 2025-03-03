@@ -30,4 +30,7 @@ void main() {
   contaDenize.imprimirSaldo();
   contaDenize.enviar(contaRoberta, 2000);
   contaDenize.imprimirSaldo();
+  contaChris.enviar(contaRoberta, 4000);
+  contaDenize.calculaRendimento();
+  contaDenize.imprimirSaldo();
 }

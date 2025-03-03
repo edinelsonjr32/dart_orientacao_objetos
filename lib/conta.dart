@@ -16,23 +16,38 @@ class Conta {
     }
   }
 
-  void imprimirSaldo(){
+  void imprimirSaldo() {
     print('O saldo do ${this._titular} é: ${this._saldo}');
   }
 
-  void  receberSaldo(double valor){
-     this._saldo += valor;
+  void receberSaldo(double valor) {
+    this._saldo += valor;
   }
 
-  void imprimirTitular(){
+  void imprimirTitular() {
     print('A conta é do(a) ${this._titular}');
   }
 }
 
-class ContaPoupanca extends Conta{
+class ContaPoupanca extends Conta {
+  double rendimento = 0.05;
+
   ContaPoupanca(super._saldo, super._titular);
+
+  void calculaRendimento() {
+    _saldo += _saldo * rendimento;
+  }
 }
 
-class ContaCorrente extends Conta{
+class ContaCorrente extends Conta {
+  double emprestimo = 300;
   ContaCorrente(super._titular, super._saldo);
+
+  @override
+  void enviar(Conta conta, double valor) {
+    if (_saldo + emprestimo >= valor){
+      _saldo -= valor;
+      imprimirSaldo();
+    }
+  }
 }
